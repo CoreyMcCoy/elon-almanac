@@ -1,0 +1,530 @@
+{
+  "reviewedAt": "2026-10-16",
+  "sources": {
+    "tesla": {
+      "title": "Tesla investor relations",
+      "url": "https://ir.tesla.com/",
+      "publisher": "Tesla",
+      "type": "Company record",
+      "date": "2026-10-16"
+    },
+    "spcx": {
+      "title": "SpaceX stock and listing FAQ",
+      "url": "https://ir.spacex.com/faqs-and-contact/",
+      "publisher": "SpaceX",
+      "type": "Company record",
+      "date": "2026-10-16"
+    },
+    "merger": {
+      "title": "xAI joins SpaceX",
+      "url": "https://x.ai/news/xai-joins-spacex",
+      "publisher": "xAI / SpaceX",
+      "type": "Company announcement",
+      "date": "2026-02-02"
+    },
+    "space": {
+      "title": "SpaceX mission and milestone archive",
+      "url": "https://www.spacex.com/mission/",
+      "publisher": "SpaceX",
+      "type": "Company record",
+      "date": "2026-10-16"
+    },
+    "nasa": {
+      "title": "NASA astronauts launch in historic Crew Dragon test flight",
+      "url": "https://www.nasa.gov/news-release/nasa-astronauts-launch-from-america-in-historic-test-flight-of-spacex-crew-dragon/",
+      "publisher": "NASA",
+      "type": "Independent agency record",
+      "date": "2020-05-30"
+    },
+    "neural": {
+      "title": "Two Years of Telepathy",
+      "url": "https://neuralink.com/updates/two-years-of-telepathy/",
+      "publisher": "Neuralink",
+      "type": "Company report",
+      "date": "2026-01-28"
+    },
+    "boring": {
+      "title": "Music City Loop progress updates",
+      "url": "https://www.boringcompany.com/projects/music-city-loop",
+      "publisher": "The Boring Company",
+      "type": "Company report",
+      "date": "2026-10-01"
+    },
+    "tunnels": {
+      "title": "Tunnels and project portfolio",
+      "url": "https://www.boringcompany.com/tunnels",
+      "publisher": "The Boring Company",
+      "type": "Company report",
+      "date": "2026-10-16"
+    },
+    "recall": {
+      "title": "NHTSA investigation EA22002: additional information",
+      "url": "https://static.nhtsa.gov/odi/inv/2022/INCR-EA22002-14496.pdf",
+      "publisher": "NHTSA",
+      "type": "Regulatory record",
+      "date": "2024-04-25"
+    },
+    "eu": {
+      "title": "Commission fines X €120 million under the Digital Services Act",
+      "url": "https://digital-strategy.ec.europa.eu/en/news/commission-fines-x-eu120-million-under-digital-services-act",
+      "publisher": "European Commission",
+      "type": "Regulatory record",
+      "date": "2025-12-05"
+    },
+    "chart": {
+      "title": "Tesla fourth-quarter and full-year 2024 update",
+      "url": "https://digitalassets.tesla.com/tesla-contents/image/upload/IR/TSLA-Q4-2024-Update.pdf",
+      "publisher": "Tesla",
+      "type": "Company results",
+      "date": "2025-01-29"
+    },
+    "tslaBio": {
+      "title": "Tesla initial public offering registration statement",
+      "url": "https://ir.tesla.com/_flysystem/s3/sec/000119312510017054/ds1-gen_0.pdf",
+      "publisher": "Tesla / SEC filing",
+      "type": "Corporate filing",
+      "date": "2010-01-29"
+    },
+    "spacexFiling": {
+      "title": "SpaceX June 2026 quarterly filing",
+      "url": "https://www.sec.gov/Archives/edgar/data/1181412/000162828026052535/spcx-20260630.htm",
+      "publisher": "SpaceX / SEC filing",
+      "type": "Corporate filing",
+      "date": "2026-08"
+    },
+    "teslaPress": {
+      "title": "Tesla production and financial releases",
+      "url": "https://ir.tesla.com/press?view=all",
+      "publisher": "Tesla",
+      "type": "Company results",
+      "date": "2026-07-22"
+    },
+    "about": {
+      "title": "Tesla: energy, vehicles and manufacturing",
+      "url": "https://www.tesla.com/about",
+      "publisher": "Tesla",
+      "type": "Company description",
+      "date": "2026-10-16"
+    },
+    "musk": {
+      "title": "Elon Musk biography",
+      "url": "https://www.tesla.com/elon-musk",
+      "publisher": "Tesla",
+      "type": "Company biography",
+      "date": "2026-10-16"
+    },
+    "spaceHistory": {
+      "title": "NASA / SpaceX CRS-5 press kit: company milestones",
+      "url": "https://www.nasa.gov/wp-content/uploads/2018/07/spacex_nasa_crs-5_presskit-105.pdf",
+      "publisher": "NASA / SpaceX",
+      "type": "Mission press kit",
+      "date": "2015-01"
+    },
+    "neuralFunding": {
+      "title": "Neuralink Series E funding announcement",
+      "url": "https://neuralink.com/updates/neuralink-raises-650m-series-e/",
+      "publisher": "Neuralink",
+      "type": "Company announcement",
+      "date": "2025-06-02"
+    },
+    "boringFunding": {
+      "title": "The Boring Company Series C funding announcement",
+      "url": "https://www.boringcompany.com/seriescround",
+      "publisher": "The Boring Company",
+      "type": "Company announcement",
+      "date": "2022-04-20"
+    }
+  },
+  "companies": [
+    {
+      "id": "spacex",
+      "name": "SpaceX",
+      "mark": "S↗",
+      "sector": "SPACE / EXPLORATION",
+      "category": "public",
+      "status": "PUBLIC · SPCX",
+      "mission": "Make life multiplanetary.",
+      "summary": "Reusable launch, human spaceflight and a much larger horizon.",
+      "development": "SpaceX began public trading on June 12, 2026, under SPCX.",
+      "next": "Watch for published flight-test results and orbital refueling demonstrations. These are technical gates, not guaranteed Mars dates.",
+      "problem": "Space transport is expensive, complex and unforgiving.",
+      "accomplishment": "Falcon boosters have landed and flown again. NASA astronauts flew on Crew Dragon in 2020.",
+      "benefit": "Reusing hardware can expand access to orbit for science, communications and exploration.",
+      "unproven": "A self-sustaining settlement on Mars remains an ambition, not an accomplished capability.",
+      "sources": [
+        "spcx",
+        "space",
+        "nasa"
+      ],
+      "question": "reuse"
+    },
+    {
+      "id": "tesla",
+      "name": "Tesla",
+      "mark": "T",
+      "sector": "ENERGY / MOBILITY",
+      "category": "public",
+      "status": "PUBLIC · TSLA",
+      "mission": "Electrify everyday life.",
+      "summary": "Electric vehicles, grid batteries, solar and the pursuit of autonomy.",
+      "development": "Tesla's investor calendar lists October 21, 2026 for third-quarter earnings.",
+      "next": "Read the next financial report for deliveries, margins and energy deployments; evaluate autonomy by its actual operating conditions.",
+      "problem": "Transport and power systems need scalable alternatives to fossil fuels.",
+      "accomplishment": "Tesla delivered 1.79 million vehicles and deployed 31.4 gigawatt-hours of energy storage in 2024.",
+      "benefit": "Electric vehicles and storage can reduce fossil-fuel use when deployed with cleaner electricity.",
+      "unproven": "Vehicle deliveries do not establish autonomous-driving safety or prove the economics of general-purpose robots.",
+      "sources": [
+        "tesla",
+        "chart",
+        "about"
+      ],
+      "question": "autonomy"
+    },
+    {
+      "id": "starlink",
+      "name": "Starlink",
+      "mark": "⌁",
+      "sector": "CONNECTIVITY / ORBIT",
+      "category": "division",
+      "status": "WITHIN SPACEX",
+      "mission": "Connect the hard-to-reach.",
+      "summary": "Internet infrastructure that starts hundreds of kilometers overhead.",
+      "development": "Starlink remains part of the SpaceX business, not a separately listed stock.",
+      "next": "Track service availability and performance in the places people actually use it.",
+      "problem": "Fiber and cell towers can be costly to build in remote locations.",
+      "accomplishment": "SpaceX operates a satellite broadband service.",
+      "benefit": "Connections can reach communities, vessels and remote sites beyond terrestrial networks.",
+      "unproven": "Universal affordability and dependable service in every location are not guaranteed by a satellite constellation.",
+      "sources": [
+        "spacexFiling"
+      ],
+      "question": "starlink"
+    },
+    {
+      "id": "neuralink",
+      "name": "Neuralink",
+      "mark": "∩",
+      "sector": "NEUROTECH / ACCESSIBILITY",
+      "category": "private",
+      "status": "PRIVATE",
+      "mission": "Restore a connection.",
+      "summary": "Brain interfaces aimed at giving people new ways to use computers.",
+      "development": "Its 2026 Telepathy retrospective describes clinical participants using its implanted interface.",
+      "next": "Look for longer follow-up, safety outcomes and independently scrutinized clinical results.",
+      "problem": "Paralysis can make communication and computer control difficult.",
+      "accomplishment": "The company reports human participants controlling digital interfaces through its implant.",
+      "benefit": "Assistive control could expand independence for people with severe movement limitations.",
+      "unproven": "Early demonstrations do not establish lifelong safety, broad effectiveness or consumer readiness.",
+      "sources": [
+        "neural",
+        "neuralFunding"
+      ],
+      "question": "neuralink"
+    },
+    {
+      "id": "xai",
+      "name": "xAI",
+      "mark": "xAI",
+      "sector": "INTELLIGENCE / COMPUTE",
+      "category": "division",
+      "status": "WITHIN SPACEX",
+      "mission": "Understand the universe.",
+      "summary": "Grok, large-scale computing and an ambitious research agenda.",
+      "development": "SpaceX announced its acquisition of xAI on February 2, 2026.",
+      "next": "Watch for reproducible capability and reliability evaluations, not only infrastructure announcements.",
+      "problem": "Useful artificial intelligence needs reasoning ability, reliable information and substantial computing infrastructure.",
+      "accomplishment": "xAI has built the Grok product and joined the SpaceX group.",
+      "benefit": "More capable assistants may help people research, build and understand complex subjects.",
+      "unproven": "Orbital artificial intelligence economics and the path to general intelligence remain claims to test.",
+      "sources": [
+        "merger",
+        "spacexFiling"
+      ],
+      "question": "ai"
+    },
+    {
+      "id": "boring",
+      "name": "The Boring Company",
+      "mark": "B.",
+      "sector": "INFRASTRUCTURE / TUNNELS",
+      "category": "private",
+      "status": "PRIVATE",
+      "mission": "Give cities another layer.",
+      "summary": "Tunneling machinery and underground electric-vehicle transport.",
+      "development": "The October 1 Music City Loop update describes preparations for another tunneling machine.",
+      "next": "The company targets a late-October start for its next tunneling machine, identified as MB3. Check the next progress report for actual completion.",
+      "problem": "Surface congestion competes with limited urban space.",
+      "accomplishment": "The company operates Loop infrastructure and reports active tunneling in Nashville.",
+      "benefit": "Some trips could move underground, freeing surface routes for other uses.",
+      "unproven": "A planned tunnel network does not prove citywide congestion relief or rail-like passenger capacity.",
+      "sources": [
+        "boring",
+        "tunnels",
+        "boringFunding"
+      ],
+      "question": "tunnels"
+    },
+    {
+      "id": "x",
+      "name": "X",
+      "mark": "𝕏",
+      "sector": "INFORMATION / PUBLIC SQUARE",
+      "category": "division",
+      "status": "WITHIN SPACEX GROUP",
+      "mission": "A global public conversation.",
+      "summary": "A social platform at the intersection of speech, trust and artificial intelligence.",
+      "development": "The European Commission announced a €120 million transparency fine in December 2025.",
+      "next": "Follow regulatory responses and measurable transparency improvements. This snapshot does not establish appeal status.",
+      "problem": "People need fast access to information and ways to challenge powerful institutions.",
+      "accomplishment": "X provides a large public publishing and discussion platform.",
+      "benefit": "Open access to competing viewpoints can help people scrutinize events.",
+      "unproven": "An open platform does not automatically produce accurate information or fair enforcement.",
+      "sources": [
+        "eu",
+        "spacexFiling"
+      ],
+      "question": "speech"
+    }
+  ],
+  "questions": [
+    {
+      "id": "reuse",
+      "topic": "technology",
+      "title": "Why is reusing a rocket such a big deal?",
+      "short": "Throwing away an expensive machine after every trip makes every trip expensive. Landing and flying it again changes the equation.",
+      "deep": "A rocket's first stage does much of the early lifting. Recovering it preserves hardware that would otherwise be discarded. SpaceX landed an orbital-class first stage in 2015 and reflew one in 2017. Reuse still requires inspection, refurbishment and fuel; it does not make launches free.",
+      "fact": "Falcon 9 demonstrated landing and reflight. NASA also used Crew Dragon to carry astronauts in 2020.",
+      "claim": "Rapid, complete reuse of Starship is intended to extend the idea to a much larger system.",
+      "meaning": "Analysis: cheaper, more frequent transport can make more space missions practical.",
+      "unknown": "Exact savings vary by mission and accounting method. A Mars settlement is a separate, much harder problem.",
+      "sources": [
+        "space",
+        "nasa"
+      ]
+    },
+    {
+      "id": "autonomy",
+      "topic": "criticism",
+      "title": "Does “Full Self-Driving” mean a car can drive itself?",
+      "short": "A product name is not a safety classification. Check the exact system, supervision requirements and location.",
+      "deep": "Driver assistance, supervised automation and a driverless service are different things. NHTSA's Autopilot record describes a Level 2 assistance system and shortcomings in preventing misuse. That historical record does not establish the capability or safety of every later release.",
+      "fact": "Tesla filed recall 23V838 in December 2023 over Autopilot controls.",
+      "claim": "Tesla pursues broader autonomy; future capability needs evidence beyond a demonstration.",
+      "meaning": "Analysis: reliable autonomy could expand mobility, but people must know when they remain responsible.",
+      "unknown": "Performance outside supported conditions, independent safety comparisons and regulatory permissions need current verification.",
+      "sources": [
+        "recall",
+        "tesla"
+      ]
+    },
+    {
+      "id": "energy",
+      "topic": "impact",
+      "title": "Why care about Tesla beyond the cars?",
+      "short": "Batteries can store electricity for when it is needed. That makes Tesla's energy business worth following on its own.",
+      "deep": "Power generation and demand do not always line up. Storage can shift electricity across time and support the grid. Tesla reported 31.4 gigawatt-hours of storage deployments in 2024, compared with 14.7 gigawatt-hours in 2023. Deployment volume alone is not a measure of emissions avoided.",
+      "fact": "Tesla reports both vehicle deliveries and energy-storage deployments.",
+      "claim": "Tesla positions vehicles, storage and solar as parts of a cleaner energy system.",
+      "meaning": "Analysis: storage can make variable renewable generation more useful.",
+      "unknown": "Project economics, battery supply chains and the electricity mix all affect the outcome.",
+      "sources": [
+        "chart",
+        "about"
+      ]
+    },
+    {
+      "id": "starlink",
+      "topic": "technology",
+      "title": "What problem does Starlink actually solve?",
+      "short": "It can connect places where running cables or building enough cell towers is difficult.",
+      "deep": "An orbiting satellite relays data between a user terminal and the broader internet. A constellation can serve a wide geographic area, but users still need equipment, power, a clear view and available capacity. Coverage and quality should be checked for the specific location.",
+      "fact": "Starlink is a service within SpaceX; it has no separate ticker in this almanac.",
+      "claim": "SpaceX presents satellite broadband as a way to widen access.",
+      "meaning": "Analysis: connectivity can support remote work, education and communication.",
+      "unknown": "Affordability, congestion, debris management and the effect on astronomy remain important evaluation questions.",
+      "sources": [
+        "spacexFiling"
+      ]
+    },
+    {
+      "id": "neuralink",
+      "topic": "impact",
+      "title": "What has Neuralink actually demonstrated?",
+      "short": "Neuralink reports people using an implanted brain interface to control computers. The first practical promise is accessibility.",
+      "deep": "An interface records neural signals and translates patterns into computer inputs. The company's Telepathy retrospective describes participants and their experiences. Those accounts are encouraging evidence of feasibility, not a substitute for long-term clinical safety and effectiveness data.",
+      "fact": "Human clinical use is described in Neuralink's own updates.",
+      "claim": "The company aims to give people with paralysis more digital independence.",
+      "meaning": "Analysis: being able to communicate and control a computer can have a meaningful effect on daily life.",
+      "unknown": "Durability, surgical risk, long-term support and outcomes across larger groups still matter.",
+      "sources": [
+        "neural"
+      ]
+    },
+    {
+      "id": "ai",
+      "topic": "technology",
+      "title": "Why put artificial intelligence and a space company together?",
+      "short": "The stated idea combines computing, communications and launch infrastructure. The business combination is real; the largest technical promises still need proof.",
+      "deep": "SpaceX announced its acquisition of xAI in February 2026. Musk's accompanying argument includes future artificial intelligence infrastructure in orbit. An acquisition does not demonstrate that space-based computing is cheaper or easier than terrestrial data centers.",
+      "fact": "xAI joined SpaceX in 2026.",
+      "claim": "The companies argue that combined infrastructure will support new artificial intelligence capabilities.",
+      "meaning": "Analysis: integration could make infrastructure decisions easier, while also concentrating capital and control.",
+      "unknown": "Launch cost, heat rejection, maintenance and power systems determine whether orbital computing makes economic sense.",
+      "sources": [
+        "merger",
+        "spacexFiling"
+      ]
+    },
+    {
+      "id": "credit",
+      "topic": "criticism",
+      "title": "Did Elon do all of this himself?",
+      "short": "No. His leadership and capital matter, and so do the engineers, employees, suppliers, public institutions and customers.",
+      "deep": "NASA's Commercial Crew program is a clear example: private hardware operated within a public program, with NASA expertise and requirements. Tesla's filings document Musk's chairmanship from 2004 and chief executive role from 2008. A company's output cannot reasonably be attributed to one person alone.",
+      "fact": "NASA partnered with SpaceX; Tesla records Musk's distinct leadership roles.",
+      "claim": "Company biographies emphasize his leadership and engineering involvement.",
+      "meaning": "Personal perspective: it is reasonable to admire ambitious leadership while giving the teams their share of the credit.",
+      "unknown": "There is no reliable single number for one executive's share of an organization's achievements.",
+      "sources": [
+        "nasa",
+        "tslaBio"
+      ]
+    },
+    {
+      "id": "speech",
+      "topic": "criticism",
+      "title": "Can I value free speech and still criticize X?",
+      "short": "Yes. Supporting open debate is compatible with expecting transparency, consistent rules and accurate claims.",
+      "deep": "In December 2025 the European Commission announced a €120 million fine for X's transparency obligations, covering verification design, advertising transparency and researcher access. That is a specific regulatory finding, not proof that every criticism of the platform is correct.",
+      "fact": "The Commission issued the fine on December 5, 2025.",
+      "claim": "An open public conversation is the platform's aspiration.",
+      "meaning": "Personal perspective: a speech principle becomes stronger when applied consistently, including to people you disagree with.",
+      "unknown": "This entry records the decision, not a verified current appeal or compliance outcome.",
+      "sources": [
+        "eu"
+      ]
+    },
+    {
+      "id": "tunnels",
+      "topic": "technology",
+      "title": "Is the Loop the same thing as a subway?",
+      "short": "No. Loop uses road vehicles in tunnels. A rail system moves passengers in trains, with different capacity and operating tradeoffs.",
+      "deep": "The Boring Company describes tunnels serving electric-vehicle transport. Its project portfolio includes operating and planned infrastructure. To compare systems fairly, look at passengers per hour, station access, cost, reliability and emergency procedures for the actual route.",
+      "fact": "The company reports active Nashville tunneling in 2026.",
+      "claim": "The company argues that its methods can improve the speed and cost of building tunnels.",
+      "meaning": "Analysis: a route can be useful without solving an entire city's traffic problem.",
+      "unknown": "A permitted or announced network is not the same as a completed network with measured ridership.",
+      "sources": [
+        "boring",
+        "tunnels"
+      ]
+    },
+    {
+      "id": "optimism",
+      "topic": "impact",
+      "title": "What is a strong, evidence-based case for optimism?",
+      "short": "Point to work that exists, explain why it matters, and keep future promises separate.",
+      "deep": "A concrete example is NASA astronauts reaching orbit aboard SpaceX hardware. Another is Tesla's reported scale in vehicles and stationary storage. Neither requires agreement with every political statement, confidence in every forecast or dismissal of legitimate criticism.",
+      "fact": "Crew Dragon carried NASA astronauts in 2020; Tesla reports large-scale vehicle and storage deployments.",
+      "claim": "Mars settlement, broader autonomy and future artificial intelligence breakthroughs go beyond those demonstrated results.",
+      "meaning": "Personal perspective: valuing difficult engineering achievements is a coherent reason to follow these companies.",
+      "unknown": "Whether future projects deliver the promised benefits must remain open to evidence.",
+      "sources": [
+        "nasa",
+        "chart"
+      ]
+    }
+  ],
+  "news": [
+    {
+      "date": "2026-10-21",
+      "kind": "UPCOMING · COMPANY CALENDAR",
+      "title": "Tesla’s next results checkpoint.",
+      "text": "Third-quarter earnings are scheduled for October 21. Use the results to compare progress with expectations.",
+      "source": "tesla"
+    },
+    {
+      "date": "2026-10-01",
+      "kind": "COMPANY PROGRESS REPORT",
+      "title": "Another machine. A bigger tunnel push.",
+      "text": "Music City Loop's October update describes preparations for its next tunneling machine, identified as MB3 and a target of four machines underground by year end.",
+      "source": "boring"
+    },
+    {
+      "date": "2026-06-12",
+      "kind": "CORPORATE MILESTONE",
+      "title": "SpaceX enters the public market.",
+      "text": "SPCX began trading in June. Starlink and xAI are part of the wider group, not additional standalone tickers.",
+      "source": "spcx"
+    }
+  ],
+  "timeline": [
+    {
+      "year": "2002",
+      "title": "SpaceX begins.",
+      "text": "Musk starts a company focused on space transport.",
+      "source": "spaceHistory"
+    },
+    {
+      "year": "2004",
+      "title": "A new chapter at Tesla.",
+      "text": "Musk joins as chairman; he becomes chief executive in 2008.",
+      "source": "tslaBio"
+    },
+    {
+      "year": "2008",
+      "title": "Falcon 1 reaches orbit.",
+      "text": "A privately developed liquid-fueled rocket reaches Earth orbit.",
+      "source": "space"
+    },
+    {
+      "year": "2015",
+      "title": "The booster comes home.",
+      "text": "Falcon 9's first stage lands after delivering a payload to orbit.",
+      "source": "space"
+    },
+    {
+      "year": "2020",
+      "title": "Human spaceflight returns.",
+      "text": "NASA astronauts launch from American soil aboard Crew Dragon.",
+      "source": "nasa"
+    },
+    {
+      "year": "2024",
+      "title": "Energy storage scales.",
+      "text": "Tesla reports 31.4 gigawatt-hours of storage deployments for the year.",
+      "source": "chart"
+    },
+    {
+      "year": "2026",
+      "title": "The ecosystem changes.",
+      "text": "xAI joins SpaceX in February. SpaceX begins public trading in June.",
+      "source": "spcx",
+      "extraSource": "merger"
+    }
+  ],
+  "chart": {
+    "years": [
+      2020,
+      2021,
+      2022,
+      2023,
+      2024
+    ],
+    "deliveries": [
+      499647,
+      936222,
+      1313851,
+      1808581,
+      1789226
+    ],
+    "energy": [
+      3,
+      4,
+      6.5,
+      14.7,
+      31.4
+    ],
+    "source": "chart"
+  }
+}

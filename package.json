@@ -1,0 +1,1 @@
+{"name":"elon-almanac","private":true,"type":"module","scripts":{"dev":"node server.mjs","check":"node check.mjs"}}

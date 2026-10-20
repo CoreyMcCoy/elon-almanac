@@ -1,0 +1,672 @@
+{
+  "editionDate": "2026-10-17",
+  "sources": {
+    "physics": {
+      "title": "Elon Musk on physics and first-principles reasoning",
+      "url": "https://www.aps.org/apsnews/2013/10/profiles-in-versatility",
+      "publisher": "American Physical Society",
+      "type": "Interview with Musk",
+      "date": "2013-10-01"
+    },
+    "engineering": {
+      "title": "Starbase tour: Musk explains his engineering process",
+      "url": "https://everydayastronaut.com/starbase-tour-and-interview-with-elon-musk/",
+      "publisher": "Everyday Astronaut",
+      "type": "Interview and accompanying notes",
+      "date": "2021-08"
+    },
+    "masterplan": {
+      "title": "The Secret Tesla Motors Master Plan",
+      "url": "https://www.tesla.com/secret-master-plan",
+      "publisher": "Tesla / Elon Musk",
+      "type": "Original statement of intent",
+      "date": "2006-08-02"
+    },
+    "plan2": {
+      "title": "Master Plan, Part Deux",
+      "url": "https://www.tesla.com/en_in/master-plan-part-deux",
+      "publisher": "Tesla / Elon Musk",
+      "type": "Original statement of intent",
+      "date": "2016-07-20"
+    },
+    "origins": {
+      "title": "Harnessing the Sun and Outer Space: Elon Musk's Sky-high Vision",
+      "url": "https://knowledge.wharton.upenn.edu/article/harnessing-the-sun-and-outer-space-elon-musks-sky-high-vision/",
+      "publisher": "Knowledge at Wharton",
+      "type": "University reporting",
+      "date": "2009"
+    },
+    "paypalSale": {
+      "title": "eBay third-quarter 2002 results: completed PayPal acquisition",
+      "url": "https://investors.ebayinc.com/investor-news/press-release-details/2002/EBay-Inc-Announces-Third-Quarter-2002-Financial-Results/default.aspx",
+      "publisher": "eBay",
+      "type": "Company results",
+      "date": "2002-10"
+    },
+    "solar": {
+      "title": "Tesla filing: SolarCity acquisition completed",
+      "url": "https://www.sec.gov/Archives/edgar/data/1318605/000119312516773705/d292845d8k.htm",
+      "publisher": "Tesla / Securities and Exchange Commission",
+      "type": "Corporate filing",
+      "date": "2016-11-21"
+    },
+    "openaiStart": {
+      "title": "Introducing OpenAI",
+      "url": "https://openai.com/index/introducing-openai/",
+      "publisher": "OpenAI",
+      "type": "Founding announcement",
+      "date": "2015-12-11"
+    },
+    "openaiExit": {
+      "title": "OpenAI supporters: Musk's board departure",
+      "url": "https://openai.com/index/openai-supporters/",
+      "publisher": "OpenAI",
+      "type": "Contemporaneous company announcement",
+      "date": "2018-02-20"
+    },
+    "autonomy2019": {
+      "title": "Tesla Autonomy Day: original presentation",
+      "url": "https://www.youtube.com/watch?v=Ucp0TTmvqOE",
+      "publisher": "Tesla",
+      "type": "Original company presentation",
+      "date": "2019-04-22"
+    },
+    "autonomyReport": {
+      "title": "Tesla's 2019 forecast for a robotaxi service",
+      "url": "https://www.axios.com/2019/04/22/tesla-robotaxis-next-year-elon-musk",
+      "publisher": "Axios",
+      "type": "Contemporaneous reporting",
+      "date": "2019-04-22"
+    },
+    "results2025": {
+      "title": "Tesla fourth-quarter and full-year 2025 update",
+      "url": "https://ir.tesla.com/_flysystem/s3/sec/000162828026003837/tsla-20260128-gen.pdf",
+      "publisher": "Tesla",
+      "type": "Company results",
+      "date": "2026-01-28"
+    },
+    "robotics": {
+      "title": "Tesla's artificial intelligence and robotics program",
+      "url": "https://www.tesla.com/AI",
+      "publisher": "Tesla",
+      "type": "Company goals; page accessed on date shown",
+      "date": "2026-10-17"
+    },
+    "falconFailure": {
+      "title": "Falcon history in the CRS-2 launch report",
+      "url": "https://sma.nasa.gov/LaunchVehicle/assets/nasa-spaceflight-now-article.pdf",
+      "publisher": "NASASpaceFlight; archived by NASA",
+      "type": "Historical launch reporting",
+      "date": "2013-03"
+    }
+  },
+  "chapters": [
+    {
+      "id": "origins",
+      "label": "Origins",
+      "title": "Before the rockets, there were maps and payments.",
+      "summary": "The early businesses explain how a software entrepreneur gained the experience and resources to take on physical industries.",
+      "story": [
+        "Before Musk became associated with electric cars and spaceflight, he worked on ways to make the internet useful in everyday life. Zip2 brought business information and maps online. His next venture, X.com, entered online financial services and became part of the PayPal story. eBay completed its purchase of PayPal in October 2002.",
+        "His education also crossed disciplines. Wharton's account describes studies in physics and business at the University of Pennsylvania. Those subjects ask different but complementary questions: what can a system physically do, and what would persuade people to pay for it?"
+      ],
+      "interpretation": "The useful connection is the progression from one kind of problem to another. Software can be changed quickly. Cars and rockets require factories, supply chains, testing and substantial capital. Success in the first field created opportunities in the next, but it did not eliminate the need to learn new skills or assemble experienced teams.",
+      "sources": [
+        "origins",
+        "paypalSale"
+      ],
+      "related": [
+        "credit",
+        "optimism"
+      ]
+    },
+    {
+      "id": "worldview",
+      "label": "Worldview",
+      "title": "Why the projects keep returning to energy, intelligence and space.",
+      "summary": "Musk describes his ambitions in terms of humanity's long-term future. Understanding that motivation helps explain the choices without proving the predictions.",
+      "story": [
+        "Tesla's original master plan described a path from an expensive electric sports car toward a broader range of vehicles. SpaceX describes a goal of making human life possible beyond Earth. These are attempts to connect a product that can be built now with a much larger future that the founder wants to help create.",
+        "In his 2013 physics interview, Musk also connected his interests to expanding humanity's ability to understand the universe. This is his account of his motivation. It helps explain the recurring themes across the companies; it cannot establish that every decision advances those goals."
+      ],
+      "interpretation": "A distant goal can make years of difficult work feel worthwhile. The practical question is what must happen next for the goal to become more plausible. A working spacecraft, a safer vehicle or a useful assistive device offers evidence. A compelling description of the future offers a reason to investigate.",
+      "sources": [
+        "masterplan",
+        "physics",
+        "space"
+      ],
+      "related": [
+        "optimism",
+        "ai"
+      ]
+    },
+    {
+      "id": "learning",
+      "label": "Learning",
+      "title": "Understand the system before borrowing its answers.",
+      "summary": "First-principles reasoning begins by asking which constraints are real and which are inherited assumptions.",
+      "story": [
+        "In the American Physical Society interview, Musk describes examining the materials in a rocket rather than assuming that existing launch prices define what a rocket must cost. This is a way to locate a question worth investigating, not a complete manufacturing plan.",
+        "He also says this style of thinking takes substantial effort and is not how he approaches every ordinary decision. That detail matters: the method is most useful when an important assumption deserves closer examination."
+      ],
+      "interpretation": "Imagine a product costs far more than its materials. The gap might contain avoidable waste, but it might also pay for skilled labor, testing, tooling and reliability. Learning the full system means investigating those explanations before concluding that everyone else has missed an easy answer.",
+      "sources": [
+        "physics"
+      ],
+      "related": [
+        "reuse",
+        "energy"
+      ]
+    },
+    {
+      "id": "execution",
+      "label": "Execution",
+      "title": "Remove unnecessary work before making it faster.",
+      "summary": "The order of Musk's engineering method is its central idea: understand the requirement, remove what is unnecessary, then improve the work that remains.",
+      "story": [
+        "During the 2021 Starbase tour, Musk described five steps: challenge requirements, remove unnecessary parts or processes, simplify the remaining design, shorten the time needed to complete it, and automate last. The sequence prevents a team from investing heavily in doing the wrong task more efficiently.",
+        "The interview also distinguishes experimental vehicles from spacecraft carrying people. The acceptable consequences of a failed test are different in those settings."
+      ],
+      "interpretation": "Consider a report that takes hours to prepare. Before buying software to generate it faster, establish who uses it and what decision it supports. If it serves no purpose, remove it. If it protects an important decision, improve it while preserving that purpose. The method requires judgment about consequences, not merely a preference for speed.",
+      "sources": [
+        "engineering"
+      ],
+      "related": [
+        "autonomy",
+        "credit"
+      ]
+    },
+    {
+      "id": "business",
+      "label": "Business",
+      "title": "Build the capabilities that the next step depends on.",
+      "summary": "The companies often combine work that other businesses buy from suppliers. That can improve coordination while increasing the amount they must manage.",
+      "story": [
+        "Tesla's 2016 plan connected vehicle production with energy generation and storage. Later that year, its acquisition of SolarCity brought a solar business into the company. The reasoning was that producing electricity, storing it and using it in vehicles belong to the same wider energy problem.",
+        "That example illustrates vertical integration: bringing related activities inside one organization. A shared founder across several companies, however, does not automatically make those companies one business."
+      ],
+      "interpretation": "Owning an important capability can help when outside suppliers limit progress. It also creates additional responsibilities, from manufacturing quality to customer service and financing. The useful test is whether controlling that activity improves the result enough to justify the added complexity.",
+      "sources": [
+        "plan2",
+        "solar"
+      ],
+      "related": [
+        "energy",
+        "ai"
+      ]
+    },
+    {
+      "id": "intelligence",
+      "label": "Artificial intelligence",
+      "title": "From an early research organization to a separate company.",
+      "summary": "Musk's involvement in artificial intelligence has changed over time. The organizations and their relationships should not be blended together.",
+      "story": [
+        "OpenAI's 2015 founding announcement named Musk and Sam Altman as co-chairs. In February 2018, OpenAI announced that Musk would leave its board and cited a potential future conflict with Tesla's work. Those announcements establish his historical role and departure; they do not establish current control.",
+        "xAI is a different organization. Its February 2026 announcement records its acquisition by SpaceX. The broader idea of combining computing and space infrastructure belongs to that later chapter."
+      ],
+      "interpretation": "Artificial intelligence can affect how people learn, communicate and build things. Following this story requires separate questions about capability, reliability, ownership and who benefits. A model performing well on a task does not settle how the technology should be governed.",
+      "sources": [
+        "openaiStart",
+        "openaiExit",
+        "merger"
+      ],
+      "related": [
+        "ai",
+        "speech"
+      ]
+    },
+    {
+      "id": "leadership",
+      "label": "Leadership",
+      "title": "A mission needs people who can challenge the plan.",
+      "summary": "Leadership can concentrate attention on a difficult goal, but the ability to question decisions is part of making the goal achievable.",
+      "story": [
+        "Musk's Starbase interview describes an expectation that engineers understand how their work affects the wider system. The benefit is easier to see in a real organization: a part that looks better in isolation may make the complete machine harder to build or operate.",
+        "NASA's crew program shows another side of execution. Getting people into orbit depended on teams, public requirements, testing and institutional cooperation, as well as company leadership."
+      ],
+      "interpretation": "A clear mission helps people decide what deserves attention. It becomes less useful when disagreement is treated as disloyalty. The important distinction is between demanding a stronger answer and making it difficult for people to report bad news. That is a standard for evaluating leadership, not a claim that every team experiences it in the same way.",
+      "sources": [
+        "engineering",
+        "nasa"
+      ],
+      "related": [
+        "credit",
+        "autonomy"
+      ]
+    },
+    {
+      "id": "critique",
+      "label": "Criticism",
+      "title": "Admiration is stronger when it can handle difficult evidence.",
+      "summary": "Achievements and criticism belong in the same account. Neither one automatically settles the other.",
+      "story": [
+        "The older Almanac names several broad concerns. This edition connects specific concerns to records: the American road-safety regulator's Autopilot investigation, the European Commission's transparency decision concerning X, and dated forecasts that can be compared with later results.",
+        "These records have different meanings. A regulatory finding is not the same as a personal judgment, and a missed deadline is not automatically proof that a technology can never work. Each conclusion needs evidence that matches its scope."
+      ],
+      "interpretation": "A useful personal position can recognize an achievement, explain its value and still ask whether a particular decision was safe, fair or well supported. That approach makes a conversation more informative because it leaves room for evidence to change the answer.",
+      "sources": [
+        "recall",
+        "eu",
+        "autonomyReport"
+      ],
+      "related": [
+        "speech",
+        "autonomy",
+        "optimism"
+      ]
+    }
+  ],
+  "ventures": [
+    {
+      "id": "zip2",
+      "name": "Zip2",
+      "period": "Early internet business",
+      "role": "Historical company",
+      "summary": "Online maps and business information were an early attempt to turn the internet into something useful for local commerce.",
+      "story": "Zip2 belongs to the beginning of the story. Its sale to Compaq preceded Musk's work on online financial services. It is included here to explain that progression, not as a current Musk-controlled company or an investment tracked by this site.",
+      "sources": [
+        "origins",
+        "musk"
+      ]
+    },
+    {
+      "id": "paypal",
+      "name": "X.com and PayPal",
+      "period": "Online financial services",
+      "role": "Historical involvement",
+      "summary": "Musk's early X.com business became part of the company that developed PayPal. This X.com was an online finance business, distinct from today's social platform.",
+      "story": "eBay completed its acquisition of PayPal on October 3, 2002. PayPal's later independent public-company history does not make it a current Musk-led business. The almanac therefore keeps it in the historical record rather than adding it to the current market watch.",
+      "sources": [
+        "origins",
+        "paypalSale"
+      ]
+    },
+    {
+      "id": "solarcity",
+      "name": "SolarCity",
+      "period": "Acquired in November 2016",
+      "role": "Became part of Tesla",
+      "summary": "SolarCity brought an existing solar-energy business into Tesla's wider plan for electricity generation, storage and transport.",
+      "story": "Tesla's acquisition filing records completion on November 21, 2016. It is an example of a corporate relationship that changed over time: a formerly separate company became part of Tesla. The acquisition itself does not prove that every financial or operational expectation was fulfilled.",
+      "sources": [
+        "solar",
+        "plan2"
+      ]
+    },
+    {
+      "id": "openai",
+      "name": "OpenAI",
+      "period": "Co-chair in 2015; board departure in 2018",
+      "role": "Historical involvement",
+      "summary": "Musk was an original co-chair and backer. The founding role should be remembered alongside his subsequent departure from the board.",
+      "story": "OpenAI's own announcements establish both dates. This historical connection does not establish present ownership or management by Musk. OpenAI and xAI remain separate names in this almanac because treating them as the same organization would obscure the history.",
+      "sources": [
+        "openaiStart",
+        "openaiExit"
+      ]
+    }
+  ],
+  "predictions": [
+    {
+      "id": "electric-range",
+      "title": "Move beyond an expensive electric sports car.",
+      "company": "Tesla",
+      "status": "demonstrated",
+      "stated": "August 2, 2006",
+      "deadline": "No single completion date in the cited plan.",
+      "claim": "Tesla's original plan proposed using an initial sports car as a starting point for a wider range of electric vehicles.",
+      "criterion": "Evidence of additional vehicle models and substantial deliveries, rather than a claim that every buyer can afford one.",
+      "outcome": "Tesla's later product history and annual delivery reports establish expansion beyond the Roadster. This entry recognizes that product progression, not every financial assumption in the original plan.",
+      "story": "The practical challenge was to enter an industry that requires factories and significant capital. Starting at a higher price gave Tesla a narrower initial market while it developed vehicles and manufacturing experience. Later models provide a concrete outcome against which to evaluate that part of the plan.",
+      "sources": [
+        "masterplan",
+        "musk",
+        "chart"
+      ],
+      "related": [
+        "energy"
+      ]
+    },
+    {
+      "id": "booster-reflight",
+      "title": "Bring an orbital-class booster back and fly it again.",
+      "company": "SpaceX",
+      "status": "demonstrated",
+      "stated": "Long-running development goal; the cited record documents the milestones.",
+      "deadline": "This entry evaluates a capability, not an original promised deadline.",
+      "claim": "A rocket's first stage can survive its mission, land and be used for another launch.",
+      "criterion": "A successful flight using a previously flown orbital-class booster.",
+      "outcome": "SpaceX records its first Falcon 9 land landing in December 2015 and its first booster reflight in March 2017.",
+      "story": "Landing demonstrated recovery. Flying the recovered hardware again demonstrated an additional capability. Keeping those milestones separate makes the achievement easier to understand. It also prevents a first-stage result from being mistaken for proof that every part of every rocket is reusable.",
+      "sources": [
+        "space"
+      ],
+      "related": [
+        "reuse"
+      ]
+    },
+    {
+      "id": "robotaxi-deadline",
+      "title": "Launch a Tesla robotaxi service the following year.",
+      "company": "Tesla",
+      "status": "missed",
+      "stated": "April 22, 2019",
+      "deadline": "2020, as reported at the 2019 event.",
+      "claim": "Musk forecast a self-driving taxi service in some American cities the next year.",
+      "criterion": "A customer service that actually operates without a human driving, within the stated period.",
+      "outcome": "The 2020 deadline was missed. Tesla's January 2026 report describes removing safety monitors from some Austin customer rides that January, years after the forecast.",
+      "story": "This is a judgment about a dated promise. It should not erase later progress or turn a limited service into proof of autonomy everywhere. A service's operating area, supervision and safety evidence remain part of the explanation.",
+      "sources": [
+        "autonomy2019",
+        "autonomyReport",
+        "results2025"
+      ],
+      "related": [
+        "autonomy"
+      ]
+    },
+    {
+      "id": "energy-integration",
+      "title": "Bring solar generation and storage into the wider Tesla business.",
+      "company": "Tesla",
+      "status": "demonstrated",
+      "stated": "July 20, 2016",
+      "deadline": "The cited plan describes a direction, not a single universal deadline.",
+      "claim": "Tesla proposed combining energy generation and storage with its vehicle business.",
+      "criterion": "Corporate and product evidence that the activities were brought together.",
+      "outcome": "The SolarCity acquisition closed in November 2016. Tesla subsequently reported energy generation and storage alongside automotive operations.",
+      "story": "An acquisition is a clear corporate event. Whether it created the expected customer benefit or financial return is a different question. This entry marks the organizational step as demonstrated and leaves the broader business judgment open.",
+      "sources": [
+        "plan2",
+        "solar",
+        "chart"
+      ],
+      "related": [
+        "energy"
+      ]
+    },
+    {
+      "id": "mars-settlement",
+      "title": "Build a self-sustaining human settlement on Mars.",
+      "company": "SpaceX",
+      "status": "open",
+      "stated": "Long-term ambition documented on the SpaceX mission page.",
+      "deadline": "No deadline is scored in this entry.",
+      "claim": "SpaceX presents human life beyond Earth as a purpose of its launch-system development.",
+      "criterion": "A settlement capable of sustaining its people and essential operations, not simply a rocket test or a crew landing.",
+      "outcome": "The reviewed sources document launch achievements and a development ambition. They do not document a self-sustaining settlement.",
+      "story": "Transport is only the first part of this problem. People would also need reliable power, food, water, shelter, medical care and the ability to maintain equipment. A successful launch program can make the ambition more plausible without completing those other tasks.",
+      "sources": [
+        "space"
+      ],
+      "related": [
+        "reuse",
+        "optimism"
+      ]
+    },
+    {
+      "id": "useful-robots",
+      "title": "Make a humanoid robot useful across everyday tasks.",
+      "company": "Tesla",
+      "status": "open",
+      "stated": "Current program objective; company page reviewed October 17, 2026.",
+      "deadline": "No specific commercial deadline is assessed here.",
+      "claim": "Tesla describes Optimus as a general-purpose robot intended to perform unsafe, repetitive or tedious work.",
+      "criterion": "Repeated useful performance in real operating conditions, with clear information about human assistance, reliability and cost.",
+      "outcome": "The reviewed program page describes the engineering goal. That page alone does not establish broad, economically useful deployment.",
+      "story": "A filmed demonstration can show a particular skill. A useful product must repeat that skill, handle variation and recover when something goes wrong. The distinction matters because the human benefit depends on dependable work over time, not a single impressive performance.",
+      "sources": [
+        "robotics"
+      ],
+      "related": [
+        "ai",
+        "autonomy"
+      ]
+    }
+  ],
+  "timeline": [
+    {
+      "id": "early-learning",
+      "year": "1990s",
+      "category": "origins",
+      "title": "Physics and business meet.",
+      "text": "Studies at the University of Pennsylvania combined scientific questions with the economics of building a company.",
+      "detail": "This background helps explain a recurring theme in Musk's interviews: he wants to understand both what a technology can do and what would allow it to reach people. Education is part of that background, not a sufficient explanation for later success.",
+      "source": "origins"
+    },
+    {
+      "id": "zip2-start",
+      "year": "1995",
+      "category": "companies",
+      "title": "The early internet becomes a business.",
+      "text": "Zip2 develops online business information and maps, before Musk turns to financial services.",
+      "detail": "The early web created an opportunity to reorganize information people already needed. This chapter is smaller in physical scale than rockets or cars, but it introduces the pattern of turning a technological change into a practical product.",
+      "source": "origins"
+    },
+    {
+      "id": "online-finance",
+      "year": "1999",
+      "category": "companies",
+      "title": "The next problem is moving money.",
+      "text": "After Zip2, X.com takes the story into online financial services and the development of PayPal.",
+      "detail": "This was a different X.com from today's social platform. The shared name should not obscure the difference between the earlier financial-services business and the later acquisition of Twitter.",
+      "source": "origins"
+    },
+    {
+      "id": "space-start",
+      "year": "2002",
+      "category": "companies",
+      "title": "SpaceX begins.",
+      "text": "A new company takes on space transport, moving the story into a capital-intensive physical industry.",
+      "detail": "The work would require engines, launch vehicles, testing and regulatory permission. The path from software to rockets therefore depended on building an organization with expertise far beyond one founder's earlier experience.",
+      "source": "spaceHistory"
+    },
+    {
+      "id": "paypal-sale",
+      "year": "2002",
+      "category": "companies",
+      "title": "eBay completes its PayPal acquisition.",
+      "text": "The transaction closes on October 3, ending an important chapter in Musk's early business history.",
+      "detail": "The closing date is recorded in eBay's contemporary results. It is useful to distinguish a transaction announcement from its completion when tracing how a business changes ownership.",
+      "source": "paypalSale"
+    },
+    {
+      "id": "tesla-entry",
+      "year": "2004",
+      "category": "companies",
+      "title": "Musk joins Tesla as chairman.",
+      "text": "His involvement grows, and he becomes chief executive in October 2008.",
+      "detail": "Tesla's registration statement records the roles separately. That chronology is more informative than compressing the company's beginnings, financing and later leadership into a single founding story.",
+      "source": "tslaBio"
+    },
+    {
+      "id": "master-plan",
+      "year": "2006",
+      "category": "principles",
+      "title": "Tesla sets out a sequence.",
+      "text": "The original master plan links a sports car to a wider range of electric vehicles.",
+      "detail": "The plan is a useful primary source because it records intent before the later outcome. A reader can compare the proposed sequence with the products and delivery figures that followed.",
+      "source": "masterplan"
+    },
+    {
+      "id": "falcon-four",
+      "year": "2008",
+      "category": "setbacks",
+      "title": "Falcon 1 succeeds after three failed attempts.",
+      "text": "The fourth flight reaches orbit in September, following unsuccessful early launches.",
+      "detail": "The failures are part of the achievement's context. A successful fourth attempt demonstrates recovery from earlier setbacks. It does not imply that all failed projects should continue indefinitely; each new attempt still needs technical evidence and resources.",
+      "source": "falconFailure"
+    },
+    {
+      "id": "dragon-cargo",
+      "year": "2012",
+      "category": "milestones",
+      "title": "Dragon reaches the space station.",
+      "text": "SpaceX's cargo spacecraft visits the International Space Station.",
+      "detail": "Cargo transport provides a practical use for launch capability. It connects a technology demonstration to an ongoing institutional need: supplying the people and research operating in orbit.",
+      "source": "space"
+    },
+    {
+      "id": "first-landing",
+      "year": "2015",
+      "category": "milestones",
+      "title": "Falcon 9's first stage lands.",
+      "text": "The booster returns after helping deliver a payload to orbit.",
+      "detail": "Recovering the vehicle is an essential step toward reuse. The next question is whether the returned hardware can be prepared and flown again, which is a separate milestone.",
+      "source": "space"
+    },
+    {
+      "id": "openai-formation",
+      "year": "2015",
+      "category": "companies",
+      "title": "OpenAI announces its founding team.",
+      "text": "Its announcement names Musk and Sam Altman as co-chairs.",
+      "detail": "This establishes Musk's historical involvement in the research organization. Later changes in leadership and structure need their own dates and sources.",
+      "source": "openaiStart"
+    },
+    {
+      "id": "solar-acquisition",
+      "year": "2016",
+      "category": "companies",
+      "title": "SolarCity becomes part of Tesla.",
+      "text": "The acquisition closes on November 21.",
+      "detail": "The transaction brings a solar business into Tesla. The company's wider energy proposition now includes the generation of electricity as well as storage and consumption.",
+      "source": "solar"
+    },
+    {
+      "id": "first-reflight",
+      "year": "2017",
+      "category": "milestones",
+      "title": "A Falcon 9 booster flies again.",
+      "text": "SpaceX records its first orbital-class booster reflight on March 30.",
+      "detail": "Reflight goes beyond recovery. It demonstrates that previously flown hardware can perform another mission, which is the practical reason to recover it in the first place.",
+      "source": "space"
+    },
+    {
+      "id": "openai-departure",
+      "year": "2018",
+      "category": "companies",
+      "title": "Musk leaves OpenAI's board.",
+      "text": "OpenAI announces his departure in February and cites a potential conflict with Tesla's artificial-intelligence work.",
+      "detail": "The announcement records what OpenAI said at the time. It is not a complete account of later disagreements, but it prevents a founding role from being confused with continuing board membership.",
+      "source": "openaiExit"
+    },
+    {
+      "id": "autonomy-forecast",
+      "year": "2019",
+      "category": "setbacks",
+      "title": "A robotaxi forecast gets a deadline.",
+      "text": "At Tesla's autonomy event, Musk forecasts a service for the following year.",
+      "detail": "A dated forecast creates a testable claim. The prediction tracker compares that deadline with later company reporting while separating the missed date from subsequent development.",
+      "source": "autonomyReport"
+    },
+    {
+      "id": "crew-launch",
+      "year": "2020",
+      "category": "milestones",
+      "title": "NASA astronauts launch aboard Crew Dragon.",
+      "text": "The May 30 mission restores crewed launches to orbit from American soil after the shuttle era.",
+      "detail": "The mission combines company engineering with a public program, certification work and the efforts of large teams. That context makes the accomplishment more complete, rather than reducing its importance.",
+      "source": "nasa"
+    },
+    {
+      "id": "engineering-order",
+      "year": "2021",
+      "category": "principles",
+      "title": "The engineering method is explained in public.",
+      "text": "A Starbase tour records the sequence from questioning requirements to automating useful work.",
+      "detail": "The order is the central lesson. Improving an unnecessary process can consume effort without improving the outcome that matters.",
+      "source": "engineering"
+    },
+    {
+      "id": "storage-scale",
+      "year": "2024",
+      "category": "milestones",
+      "title": "Tesla reports a larger storage business.",
+      "text": "Annual energy-storage deployments reach 31.4 gigawatt-hours in the company's results.",
+      "detail": "The unit measures the amount of electricity that storage systems can hold. It makes the scale of the energy business visible separately from vehicle deliveries.",
+      "source": "chart"
+    },
+    {
+      "id": "new-group",
+      "year": "2026",
+      "category": "companies",
+      "title": "The SpaceX group changes.",
+      "text": "xAI joins SpaceX in February, and SpaceX begins public trading in June.",
+      "detail": "The ownership map and market watch reflect those changes. They keep company brands visible without presenting every brand as a separately listed stock.",
+      "source": "spcx",
+      "extraSource": "merger"
+    }
+  ],
+  "connections": [
+    {
+      "id": "spacex",
+      "name": "SpaceX",
+      "subtitle": "Launch and space infrastructure",
+      "relation": "Public parent company",
+      "body": "SpaceX combines its launch and spacecraft work with businesses inside the group. Starlink is a satellite connectivity service, while xAI brings a separate artificial-intelligence history. Select a mission below to read what it does and what remains to be demonstrated.",
+      "children": [
+        "starlink",
+        "xai",
+        "x"
+      ],
+      "sources": [
+        "spacexFiling",
+        "merger"
+      ]
+    },
+    {
+      "id": "tesla",
+      "name": "Tesla",
+      "subtitle": "Vehicles, electricity and robotics",
+      "relation": "Separate public company",
+      "body": "Tesla's activities include electric vehicles, energy storage and work on autonomous systems. SolarCity's acquisition is a historical ownership change within this branch. A shared leader with SpaceX does not make Tesla a subsidiary of SpaceX.",
+      "children": [],
+      "sources": [
+        "tesla",
+        "solar"
+      ]
+    },
+    {
+      "id": "neuralink",
+      "name": "Neuralink",
+      "subtitle": "Brain interfaces",
+      "relation": "Separate private company",
+      "body": "Neuralink's work focuses on interfaces between neural signals and digital systems. It is shown as a separate company. Its clinical progress should be assessed through participant outcomes and research evidence rather than inferred from another company's success.",
+      "children": [],
+      "sources": [
+        "neural",
+        "neuralFunding"
+      ]
+    },
+    {
+      "id": "boring",
+      "name": "The Boring Company",
+      "subtitle": "Tunneling and transport",
+      "relation": "Separate private company",
+      "body": "The Boring Company develops tunneling systems and transport projects. Its use of electric vehicles creates a technological connection to the wider story; that connection should not be mistaken for ownership by Tesla.",
+      "children": [],
+      "sources": [
+        "boring",
+        "boringFunding"
+      ]
+    }
+  ],
+  "changes": [
+    {
+      "date": "2026-10-17",
+      "title": "The two almanacs now form one reference.",
+      "text": "The futuristic design now includes eight chapters about Musk's background and methods, a company relationship map, four historical ventures, and a prediction tracker with explicit criteria."
+    },
+    {
+      "date": "2026-10-17",
+      "title": "The history is searchable and the evidence is closer.",
+      "text": "Nineteen timeline entries distinguish company changes, milestones, working principles and setbacks. Entries open into fuller explanations with their sources."
+    },
+    {
+      "date": "2026-10-17",
+      "title": "Return to the topics you want to keep.",
+      "text": "Search across the archive, save entries in this browser, and follow related questions. Existing personal notes remain in place."
+    }
+  ]
+}
