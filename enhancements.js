@@ -1,36 +1,242 @@
-export function enhance({data,$,$$,esc,sourceLink,show,copy,toast,openCompany,openQuestion}){
-const labels={demonstrated:'Demonstrated',missed:'Missed deadline',open:'Still open'};
-const paragraphs=value=>(Array.isArray(value)?value:[value]).map(p=>`<p>${esc(p)}</p>`).join('');
-const sources=ids=>`<div class="detail-sources"><h3>Follow the evidence</h3>${ids.map(sourceLink).join('')}</div>`;
-const records=[...data.companies.map(x=>({...x,kind:'company',title:x.name})),...data.questions.map(x=>({...x,kind:'question'})),...data.chapters.map(x=>({...x,kind:'chapter'})),...data.ventures.map(x=>({...x,kind:'venture',title:x.name})),...data.predictions.map(x=>({...x,kind:'prediction'})),...data.timeline.map(x=>({...x,kind:'event'}))];
-const key=r=>`${r.kind}-${r.id}`;
-let saved=new Set(),savedOnly=false;
-try{const value=JSON.parse(localStorage.getItem('almanac-bookmarks')||'[]');if(Array.isArray(value))saved=new Set(value.filter(x=>typeof x==='string'))}catch{}
-function open(recordKey){const r=records.find(x=>key(x)===recordKey);if(!r)return;
-if(r.kind==='company')return openCompany(r.id);if(r.kind==='question')return openQuestion(r.id);
-let body='';
-if(r.kind==='chapter')body=`<p class="lead">${esc(r.summary)}</p>${paragraphs(r.story)}<div class="evidence-row"><span class="eyebrow">INTERPRETATION</span><p>${esc(r.interpretation)}</p></div>${sources(r.sources)}`;
-if(r.kind==='venture')body=`<p class="eyebrow">${esc(r.period)} · ${esc(r.role)}</p><p class="lead">${esc(r.summary)}</p>${paragraphs(r.story)}${sources(r.sources)}`;
-if(r.kind==='prediction')body=`<span class="assessment ${r.status}">${labels[r.status]}</span><p class="lead">${esc(r.claim)}</p><dl class="claim-dates"><dt>Statement or reference date</dt><dd>${esc(r.stated)}</dd><dt>Deadline being assessed</dt><dd>${esc(r.deadline)}</dd></dl><h3>The context</h3>${paragraphs(r.story)}<h3>What would count as success?</h3><p>${esc(r.criterion)}</p><div class="evidence-row"><span class="eyebrow">THE OUTCOME AND ITS LIMITS</span><p>${esc(r.outcome)}</p></div><p class="subnote">Assessment added ${data.editionDate}. Status applies to the specific criterion above.</p>${sources(r.sources)}`;
-if(r.kind==='event')body=`<p class="eyebrow">${esc(r.year)} · ${esc(r.category)}</p><p class="lead">${esc(r.text)}</p>${paragraphs(r.detail)}${sources([r.source,...(r.extraSource?[r.extraSource]:[])])}`;
-show(`<p class="eyebrow blue">THE ALMANAC / ${esc(r.kind.toUpperCase())}</p><h2 id="detail-title">${esc(r.title)}</h2>${body}`,key(r));}
-function bookmarkFooter(hash){const r=records.find(x=>key(x)===hash);if(!r)return;
-const related=r.related||(r.question?[r.question]:[]);
-$('#detail-content').insertAdjacentHTML('beforeend',`<div class="reading-tools"><button class="button primary" data-save="${esc(hash)}" aria-pressed="${saved.has(hash)}">${saved.has(hash)?'Remove from saved entries':'Save this entry'}</button><button class="text-link" data-record-link="${esc(hash)}">Copy local link ↗</button></div>${related.length?`<div class="related"><h3>Continue the story</h3>${related.map(id=>{const q=data.questions.find(q=>q.id===id);return q?`<button data-question="${id}">${esc(q.title)} <span>→</span></button>`:''}).join('')}</div>`:''}`);}
-document.addEventListener('almanac:detail',e=>bookmarkFooter(e.detail.hash));
-function archive(){const term=$('#archive-search').value.toLowerCase().trim();const found=records.filter(r=>(!savedOnly||saved.has(key(r)))&&JSON.stringify(r).toLowerCase().includes(term));const shown=term||savedOnly?found:found.slice(0,6);$('#archive-count').textContent=savedOnly?`${found.length} saved entries`:`${found.length} searchable entries${!term?' · A selection to get you started':''}`;$('#archive-results').innerHTML=shown.length?shown.map(r=>`<button class="archive-result" data-record="${key(r)}"><span class="eyebrow">${esc(r.kind)}${saved.has(key(r))?' · SAVED':''}</span><strong>${esc(r.title)}</strong><span>Read the full entry ↗</span></button>`).join(''):'<p class="empty">'+(savedOnly?'Your saved entries will appear here. Open an entry and choose “Save this entry”.':'No entries match that search. Try a company name or a broader topic.')+'</p>';}
-$('#archive-search').oninput=archive;$('#saved-only').onclick=()=>{savedOnly=!savedOnly;$('#saved-only').setAttribute('aria-pressed',savedOnly);$('#saved-only').classList.toggle('active',savedOnly);archive()};
-function chapter(id){const c=data.chapters.find(c=>c.id===id);$('#chapter-nav').innerHTML=data.chapters.map((r,i)=>`<button data-chapter-preview="${r.id}" aria-pressed="${id===r.id}" class="${id===r.id?'active':''}"><span>${String(i+1).padStart(2,'0')}</span>${esc(r.label)}<b>↗</b></button>`).join('');$('#chapter-preview').innerHTML=`<p class="eyebrow blue">${esc(c.label)} / THE FULLER PICTURE</p><h3>${esc(c.title)}</h3><p class="chapter-summary">${esc(c.summary)}</p>${paragraphs(c.story[0])}<button class="button primary" data-record="chapter-${c.id}">Read the complete chapter ↗</button>`;}
-$('#chapter-nav').onclick=e=>{const b=e.target.closest('[data-chapter-preview]');if(b)chapter(b.dataset.chapterPreview)};
-$('#company-map').innerHTML=`<div class="map-heading"><span class="eyebrow blue">THE COMPANY CONSTELLATION</span><p>Ownership connects some businesses. A shared founder connects others. Each branch explains the difference.</p></div>`+data.connections.map(c=>`<article class="map-branch"><span class="eyebrow">${esc(c.relation)}</span><button class="map-parent" data-company="${c.id}">${esc(c.name)} ↗</button><p>${esc(c.body)}</p>${c.children.length?`<div class="map-children">${c.children.map(id=>`<button data-company="${id}">${esc(data.companies.find(c=>c.id===id).name)} ↗</button>`).join('')}</div>`:''}</article>`).join('');
-$('#ventures').innerHTML=data.ventures.map(r=>`<button class="research-card" data-record="venture-${r.id}"><span class="eyebrow">${esc(r.period)} / HISTORICAL CONNECTION</span><h3>${esc(r.name)}</h3><p>${esc(r.summary)}</p><span class="read-entry">Read the earlier chapter ↗</span></button>`).join('');
-function predictions(filter='all'){$('#prediction-grid').innerHTML=data.predictions.filter(r=>filter==='all'||r.status===filter).map(r=>`<button class="research-card" data-record="prediction-${r.id}"><span class="assessment ${r.status}">${labels[r.status]}</span><h3>${esc(r.title)}</h3><p>${esc(r.claim)}</p><span class="prediction-date">${esc(r.company)} · ${esc(r.stated)}</span><span class="read-entry">See the claim and the evidence ↗</span></button>`).join('')}
-$('#prediction-filters').onclick=e=>{const b=e.target.closest('[data-status]');if(!b)return;$$('#prediction-filters button').forEach(x=>{x.classList.toggle('active',x===b);x.setAttribute('aria-pressed',x===b)});predictions(b.dataset.status)};
-let category='all';const cats=['all',...new Set(data.timeline.map(r=>r.category))];$('#timeline-filters').innerHTML=cats.map(c=>`<button data-category="${c}" aria-pressed="${c==='all'}" class="${c==='all'?'active':''}">${c==='all'?'All turning points':c[0].toUpperCase()+c.slice(1)}</button>`).join('');
-function timeline(){const term=$('#timeline-search').value.toLowerCase().trim();const found=data.timeline.filter(r=>(category==='all'||r.category===category)&&JSON.stringify(r).toLowerCase().includes(term));$('#timeline-count').textContent=`${found.length} turning points`;$('#timeline').innerHTML=found.length?found.map(r=>`<article class="timeline-item in-view"><strong>${esc(r.year)}</strong><span class="event-category">${esc(r.category)}</span><h3>${esc(r.title)}</h3><p>${esc(r.text)}</p><button class="text-link" data-record="event-${r.id}">Read the story and sources ↗</button></article>`).join(''):'<p class="empty">No turning points match these filters.</p>';}
-$('#timeline-search').oninput=timeline;$('#timeline-filters').onclick=e=>{const b=e.target.closest('[data-category]');if(!b)return;category=b.dataset.category;$$('#timeline-filters button').forEach(x=>{x.classList.toggle('active',x===b);x.setAttribute('aria-pressed',x===b)});timeline()};
-$('#changes-grid').innerHTML=data.changes.map(r=>`<article class="news-card"><span class="eyebrow">${esc(r.date)}</span><h3>${esc(r.title)}</h3><p>${esc(r.text)}</p></article>`).join('');
-document.addEventListener('click',e=>{const b=e.target.closest('[data-record],[data-save],[data-record-link]');if(!b)return;if(b.dataset.record)open(b.dataset.record);if(b.dataset.recordLink)copy(`${location.origin}${location.pathname}#${b.dataset.recordLink}`);if(b.dataset.save){const id=b.dataset.save;const next=new Set(saved);next.has(id)?next.delete(id):next.add(id);try{localStorage.setItem('almanac-bookmarks',JSON.stringify([...next]));saved=next;b.textContent=saved.has(id)?'Remove from saved entries':'Save this entry';b.setAttribute('aria-pressed',saved.has(id));archive();toast(saved.has(id)?'Entry saved in this browser':'Entry removed from saved entries')}catch{toast('Browser storage is unavailable. Copy the entry link to keep it.')}}});
-function route(){if(/^#(chapter|venture|prediction|event)-/.test(location.hash))open(location.hash.slice(1))}window.addEventListener('hashchange',route);
-archive();chapter(data.chapters[0].id);predictions();timeline();route();
+export function enhance({
+  data,
+  $,
+  $$,
+  esc,
+  sourceLink,
+  show,
+  copy,
+  toast,
+  openCompany,
+  openQuestion,
+}) {
+  const labels = {
+    demonstrated: "Demonstrated",
+    missed: "Missed deadline",
+    open: "Still open",
+  };
+  const paragraphs = (value) =>
+    (Array.isArray(value) ? value : [value])
+      .map((p) => `<p>${esc(p)}</p>`)
+      .join("");
+  const sources = (ids) =>
+    `<div class="detail-sources"><h3>Follow the evidence</h3>${ids.map(sourceLink).join("")}</div>`;
+  const records = [
+    ...data.companies.map((x) => ({ ...x, kind: "company", title: x.name })),
+    ...data.questions.map((x) => ({ ...x, kind: "question" })),
+    ...data.chapters.map((x) => ({ ...x, kind: "chapter" })),
+    ...data.ventures.map((x) => ({ ...x, kind: "venture", title: x.name })),
+    ...data.predictions.map((x) => ({ ...x, kind: "prediction" })),
+    ...data.timeline.map((x) => ({ ...x, kind: "event" })),
+  ];
+  const key = (r) => `${r.kind}-${r.id}`;
+  let saved = new Set(),
+    savedOnly = false;
+  try {
+    const value = JSON.parse(localStorage.getItem("almanac-bookmarks") || "[]");
+    if (Array.isArray(value))
+      saved = new Set(value.filter((x) => typeof x === "string"));
+  } catch {}
+  function open(recordKey) {
+    const r = records.find((x) => key(x) === recordKey);
+    if (!r) return;
+    if (r.kind === "company") return openCompany(r.id);
+    if (r.kind === "question") return openQuestion(r.id);
+    let body = "";
+    if (r.kind === "chapter")
+      body = `<p class="lead">${esc(r.summary)}</p>${paragraphs(r.story)}<div class="evidence-row"><span class="eyebrow">INTERPRETATION</span><p>${esc(r.interpretation)}</p></div>${sources(r.sources)}`;
+    if (r.kind === "venture")
+      body = `<p class="eyebrow">${esc(r.period)} · ${esc(r.role)}</p><p class="lead">${esc(r.summary)}</p>${paragraphs(r.story)}${sources(r.sources)}`;
+    if (r.kind === "prediction")
+      body = `<span class="assessment ${r.status}">${labels[r.status]}</span><p class="lead">${esc(r.claim)}</p><dl class="claim-dates"><dt>Statement or reference date</dt><dd>${esc(r.stated)}</dd><dt>Deadline being assessed</dt><dd>${esc(r.deadline)}</dd></dl><h3>The context</h3>${paragraphs(r.story)}<h3>What would count as success?</h3><p>${esc(r.criterion)}</p><div class="evidence-row"><span class="eyebrow">THE OUTCOME AND ITS LIMITS</span><p>${esc(r.outcome)}</p></div><p class="subnote">Assessment added ${data.editionDate}. Status applies to the specific criterion above.</p>${sources(r.sources)}`;
+    if (r.kind === "event")
+      body = `<p class="eyebrow">${esc(r.year)} · ${esc(r.category)}</p><p class="lead">${esc(r.text)}</p>${paragraphs(r.detail)}${sources([r.source, ...(r.extraSource ? [r.extraSource] : [])])}`;
+    show(
+      `<p class="eyebrow blue">THE ALMANAC / ${esc(r.kind.toUpperCase())}</p><h2 id="detail-title">${esc(r.title)}</h2>${body}`,
+      key(r),
+    );
+  }
+  function bookmarkFooter(hash) {
+    const r = records.find((x) => key(x) === hash);
+    if (!r) return;
+    const related = r.related || (r.question ? [r.question] : []);
+    $("#detail-content").insertAdjacentHTML(
+      "beforeend",
+      `<div class="reading-tools"><button class="button primary" data-save="${esc(hash)}" aria-pressed="${saved.has(hash)}">${saved.has(hash) ? "Remove from saved entries" : "Save this entry"}</button><button class="text-link" data-record-link="${esc(hash)}">Copy local link ↗</button></div>${
+        related.length
+          ? `<div class="related"><h3>Continue the story</h3>${related
+              .map((id) => {
+                const q = data.questions.find((q) => q.id === id);
+                return q
+                  ? `<button data-question="${id}">${esc(q.title)} <span>→</span></button>`
+                  : "";
+              })
+              .join("")}</div>`
+          : ""
+      }`,
+    );
+  }
+  document.addEventListener("almanac:detail", (e) =>
+    bookmarkFooter(e.detail.hash),
+  );
+  function archive() {
+    const term = $("#archive-search").value.toLowerCase().trim();
+    const found = records.filter(
+      (r) =>
+        (!savedOnly || saved.has(key(r))) &&
+        JSON.stringify(r).toLowerCase().includes(term),
+    );
+    const shown = term || savedOnly ? found : found.slice(0, 6);
+    $("#archive-count").textContent = savedOnly
+      ? `${found.length} saved entries`
+      : `${found.length} searchable entries${!term ? " · A selection to get you started" : ""}`;
+    $("#archive-results").innerHTML = shown.length
+      ? shown
+          .map(
+            (r) =>
+              `<button class="archive-result" data-record="${key(r)}"><span class="eyebrow">${esc(r.kind)}${saved.has(key(r)) ? " · SAVED" : ""}</span><strong>${esc(r.title)}</strong><span>Read the full entry ↗</span></button>`,
+          )
+          .join("")
+      : '<p class="empty">' +
+        (savedOnly
+          ? "Your saved entries will appear here. Open an entry and choose “Save this entry”."
+          : "No entries match that search. Try a company name or a broader topic.") +
+        "</p>";
+  }
+  $("#archive-search").oninput = archive;
+  $("#saved-only").onclick = () => {
+    savedOnly = !savedOnly;
+    $("#saved-only").setAttribute("aria-pressed", savedOnly);
+    $("#saved-only").classList.toggle("active", savedOnly);
+    archive();
+  };
+  function chapter(id) {
+    const c = data.chapters.find((c) => c.id === id);
+    $("#chapter-nav").innerHTML = data.chapters
+      .map(
+        (r, i) =>
+          `<button data-chapter-preview="${r.id}" aria-pressed="${id === r.id}" class="${id === r.id ? "active" : ""}"><span>${String(i + 1).padStart(2, "0")}</span>${esc(r.label)}<b>↗</b></button>`,
+      )
+      .join("");
+    $("#chapter-preview").innerHTML =
+      `<p class="eyebrow blue">${esc(c.label)} / THE FULLER PICTURE</p><h3>${esc(c.title)}</h3><p class="chapter-summary">${esc(c.summary)}</p>${paragraphs(c.story[0])}<button class="button primary" data-record="chapter-${c.id}">Read the complete chapter ↗</button>`;
+  }
+  $("#chapter-nav").onclick = (e) => {
+    const b = e.target.closest("[data-chapter-preview]");
+    if (b) chapter(b.dataset.chapterPreview);
+  };
+  $("#company-map").innerHTML =
+    `<div class="map-heading"><span class="eyebrow blue">THE COMPANY CONSTELLATION</span><p>Ownership connects some businesses. A shared founder connects others. Each branch explains the difference.</p></div>` +
+    data.connections
+      .map(
+        (c) =>
+          `<article class="map-branch"><span class="eyebrow">${esc(c.relation)}</span><button class="map-parent" data-company="${c.id}">${esc(c.name)} ↗</button><p>${esc(c.body)}</p>${c.children.length ? `<div class="map-children">${c.children.map((id) => `<button data-company="${id}">${esc(data.companies.find((c) => c.id === id).name)} ↗</button>`).join("")}</div>` : ""}</article>`,
+      )
+      .join("");
+  $("#ventures").innerHTML = data.ventures
+    .map(
+      (r) =>
+        `<button class="research-card" data-record="venture-${r.id}"><span class="eyebrow">${esc(r.period)} / HISTORICAL CONNECTION</span><h3>${esc(r.name)}</h3><p>${esc(r.summary)}</p><span class="read-entry">Read the earlier chapter ↗</span></button>`,
+    )
+    .join("");
+  function predictions(filter = "all") {
+    $("#prediction-grid").innerHTML = data.predictions
+      .filter((r) => filter === "all" || r.status === filter)
+      .map(
+        (r) =>
+          `<button class="research-card" data-record="prediction-${r.id}"><span class="assessment ${r.status}">${labels[r.status]}</span><h3>${esc(r.title)}</h3><p>${esc(r.claim)}</p><span class="prediction-date">${esc(r.company)} · ${esc(r.stated)}</span><span class="read-entry">See the claim and the evidence ↗</span></button>`,
+      )
+      .join("");
+  }
+  $("#prediction-filters").onclick = (e) => {
+    const b = e.target.closest("[data-status]");
+    if (!b) return;
+    $$("#prediction-filters button").forEach((x) => {
+      x.classList.toggle("active", x === b);
+      x.setAttribute("aria-pressed", x === b);
+    });
+    predictions(b.dataset.status);
+  };
+  let category = "all";
+  const cats = ["all", ...new Set(data.timeline.map((r) => r.category))];
+  $("#timeline-filters").innerHTML = cats
+    .map(
+      (c) =>
+        `<button data-category="${c}" aria-pressed="${c === "all"}" class="${c === "all" ? "active" : ""}">${c === "all" ? "All turning points" : c[0].toUpperCase() + c.slice(1)}</button>`,
+    )
+    .join("");
+  function timeline() {
+    const term = $("#timeline-search").value.toLowerCase().trim();
+    const found = data.timeline.filter(
+      (r) =>
+        (category === "all" || r.category === category) &&
+        JSON.stringify(r).toLowerCase().includes(term),
+    );
+    $("#timeline-count").textContent = `${found.length} turning points`;
+    $("#timeline").innerHTML = found.length
+      ? found
+          .map(
+            (r) =>
+              `<article class="timeline-item in-view"><strong>${esc(r.year)}</strong><span class="event-category">${esc(r.category)}</span><h3>${esc(r.title)}</h3><p>${esc(r.text)}</p><button class="text-link" data-record="event-${r.id}">Read the story and sources ↗</button></article>`,
+          )
+          .join("")
+      : '<p class="empty">No turning points match these filters.</p>';
+  }
+  $("#timeline-search").oninput = timeline;
+  $("#timeline-filters").onclick = (e) => {
+    const b = e.target.closest("[data-category]");
+    if (!b) return;
+    category = b.dataset.category;
+    $$("#timeline-filters button").forEach((x) => {
+      x.classList.toggle("active", x === b);
+      x.setAttribute("aria-pressed", x === b);
+    });
+    timeline();
+  };
+  $("#changes-grid").innerHTML = data.changes
+    .map(
+      (r) =>
+        `<article class="news-card"><span class="eyebrow">${esc(r.date)}</span><h3>${esc(r.title)}</h3><p>${esc(r.text)}</p></article>`,
+    )
+    .join("");
+  document.addEventListener("click", (e) => {
+    const b = e.target.closest("[data-record],[data-save],[data-record-link]");
+    if (!b) return;
+    if (b.dataset.record) open(b.dataset.record);
+    if (b.dataset.recordLink)
+      copy(`${location.origin}${location.pathname}#${b.dataset.recordLink}`);
+    if (b.dataset.save) {
+      const id = b.dataset.save;
+      const next = new Set(saved);
+      next.has(id) ? next.delete(id) : next.add(id);
+      try {
+        localStorage.setItem("almanac-bookmarks", JSON.stringify([...next]));
+        saved = next;
+        b.textContent = saved.has(id)
+          ? "Remove from saved entries"
+          : "Save this entry";
+        b.setAttribute("aria-pressed", saved.has(id));
+        archive();
+        toast(
+          saved.has(id)
+            ? "Entry saved in this browser"
+            : "Entry removed from saved entries",
+        );
+      } catch {
+        toast(
+          "Browser storage is unavailable. Copy the entry link to keep it.",
+        );
+      }
+    }
+  });
+  function route() {
+    if (/^#(chapter|venture|prediction|event)-/.test(location.hash))
+      open(location.hash.slice(1));
+  }
+  window.addEventListener("hashchange", route);
+  archive();
+  chapter(data.chapters[0].id);
+  predictions();
+  timeline();
+  route();
 }

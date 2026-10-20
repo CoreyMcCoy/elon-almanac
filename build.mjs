@@ -1,18 +1,19 @@
-import {copyFile, mkdir} from 'node:fs/promises';
+import { copyFile, mkdir } from "node:fs/promises";
 
-const output = new URL('./dist/', import.meta.url);
-await mkdir(new URL('assets/', output), {recursive: true});
+const output = new URL("./dist/", import.meta.url);
+await mkdir(new URL("assets/", output), { recursive: true });
 
 // Publish only browser assets; the development server is not a function.
 const files = [
-  'index.html',
-  'styles.css',
-  'app.js',
-  'enhancements.js',
-  'content.json',
-  'research.json',
-  'README.md',
-  'assets/demo2.jpg',
+  "index.html",
+  "styles.css",
+  "app.js",
+  "enhancements.js",
+  "content.json",
+  "research.json",
+  "favicon.ico",
+  "README.md",
+  "assets/demo2.jpg",
 ];
 
 for (const file of files) {
