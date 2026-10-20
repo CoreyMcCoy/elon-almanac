@@ -14,6 +14,16 @@ npm run dev
 
 Visit http://127.0.0.1:4173. The server binds only to this computer. Stop it with Control+C. If port 4173 is in use, check whether the existing preview is already running.
 
+## Deploy to Vercel
+
+This is a static website. `app.js` and `enhancements.js` run in the browser and must not be used as Node.js function entry points.
+
+Run `npm run build` to validate the site and copy its public files into `dist/`. The committed `vercel.json` selects the **Other** framework preset, runs this build, and serves `dist/` as static files. No environment variables or server functions are required.
+
+Deploy the folder containing `vercel.json`. For a Git-connected Vercel project, commit and push these files to trigger a new deployment. If setting up the project manually, use framework **Other**, build command `npm run build`, and output directory `dist`.
+
+If a deployment reports `FUNCTION_INVOCATION_FAILED` with `ReferenceError: document is not defined`, check that Vercel is using the static configuration above. The Node.js preset can mistake the browser's `app.js` for a backend entry point.
+
 ## What works
 
 - Seven filterable company/platform dossiers: SpaceX, Tesla, Starlink, Neuralink, xAI, The Boring Company and X.
@@ -56,7 +66,7 @@ The orbital visual is CSS illustration, not a rendering of actual live satellite
 
 ## Status
 
-Local only. No deployment, external account, subscription, database or publishing service has been created. This is an independent personal almanac, not an official company publication. Content can be updated without a build step.
+This repository includes static hosting configuration for Vercel. A local build does not publish the site. This is an independent personal almanac, not an official company publication. Local content updates need only a browser refresh; hosted updates require rebuilding and redeploying.
 
 ## Verification for this edition
 

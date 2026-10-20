@@ -1,1 +1,10 @@
-{"name":"elon-almanac","private":true,"type":"module","scripts":{"dev":"node server.mjs","check":"node check.mjs"}}
+{
+  "name": "elon-almanac",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node server.mjs",
+    "check": "node check.mjs",
+    "build": "npm run check && node build.mjs"
+  }
+}
